@@ -2,10 +2,8 @@
 import rospy
 import math
 from std_msgs.msg import Float32
-angle = 0.0
 
 def receive_angle_cb(deg):
-    global angle
     multiple = Float32()
     multiple.data = (math.pi/180)
     ang = deg.data * multiple.data
